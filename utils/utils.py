@@ -6,7 +6,7 @@ import requests
 def konversi_koordinat_lokasi(koordinat_lokasi):
     if "," in koordinat_lokasi:
         koordinat_lokasi_raw = koordinat_lokasi
-        koordinat_lokasi = koordinat_lokasi.split(",")
+        koordinat_lokasi = koordinat_lokasi.split(",").replace("'","")
 
     if isinstance(koordinat_lokasi, list):
         if len(koordinat_lokasi) != 2:
