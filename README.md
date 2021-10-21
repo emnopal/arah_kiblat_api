@@ -1,2 +1,4 @@
-# arah_kiblat_api
-API untuk aplikasi Arah Kiblat
+# Arah Kiblat API
+## Keterangan
+API untuk aplikasi Arah Kiblat <br>
+Berfungsi untuk menampilkan sudut dari satu lokasi ke Ka'bah (Makkah)
