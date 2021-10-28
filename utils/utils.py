@@ -13,7 +13,7 @@ def konversi_koordinat_lokasi(koordinat_lokasi):
             raise ValueError("Format Koordinat (Garis dan Bujur) salah!")
         else:
             lintang_lokasi, bujur_lokasi = list(map(float, koordinat_lokasi))
-            return [koordinat_lokasi_raw], [np.deg2rad(-lintang_lokasi)], [np.deg2rad(bujur_lokasi)]
+            return [koordinat_lokasi_raw], [lintang_lokasi], [bujur_lokasi]
 
     if isinstance(koordinat_lokasi, str):
         time.sleep(1)  # biar gak dianggap bot
@@ -26,8 +26,8 @@ def konversi_koordinat_lokasi(koordinat_lokasi):
             lokasi.append(parse['display_name'])
             lintang.append(parse['lat'])
             bujur.append(parse['lon'])
-        lintang = list(map(np.deg2rad, map(lambda x: -x, map(float, lintang))))
-        bujur = list(map(np.deg2rad, map(float, bujur)))
+        lintang = list(map(float, lintang))
+        bujur = list(map(float, bujur))
         return lokasi, lintang, bujur
 
 
